@@ -22,7 +22,7 @@ int main() {
     for (i = 0; i < is_sayisi; i++) {
         printf("Is %d: ", i + 1);
         for (j = 0; j < makine_sayisi; j++) {
-            scanf("%d", &is_suresi[i][j]);// her iþ için her makinenin süresi
+            scanf("%d", &is_suresi[i][j]);// her iÃ¾ iÃ§in her makinenin sÃ¼resi
         }
     }
 
@@ -33,11 +33,11 @@ int main() {
             scanf("%d", &gecis_maliyeti[i][j]);
         }
     }
-// Ýlk iþin süreleri doðrudan dp tablosuna yazýlýr
+// Ãlk iÃ¾in sÃ¼releri doÃ°rudan dp tablosuna yazÃ½lÃ½r
     for (j = 0; j < makine_sayisi; j++) {
         dp[0][j] = is_suresi[0][j];
     }
-// Diðer iþler için en düþük geçiþli yol hesaplanýr
+// DiÃ°er iÃ¾ler iÃ§in en dÃ¼Ã¾Ã¼k geÃ§iÃ¾li yol hesaplanÃ½r
     for (i = 1; i < is_sayisi; i++) {
         for (j = 0; j < makine_sayisi; j++) {
             dp[i][j] = INT_MAX;
